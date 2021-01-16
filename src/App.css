@@ -1,0 +1,47 @@
+.App {
+  text-align: center;
+}
+
+.navbar {
+  background-color: rgb(0, 0, 0);
+  padding-bottom: 10px;
+  height: 220px;
+  font-size: calc(10px + 2vmin);
+}
+a {
+  color: white;
+  padding: 20px;
+  margin: auto;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  display: "inline";
+  position: relative;
+  margin: 20px;
+  padding: 10px;
+}
+
+.homepage {
+  padding-top: 50px;
+  background-color: rgb(211, 23, 201);
+  color: white;
+}
+.testimonials {
+  margin: 50px;
+  padding: 5%;
+}
+
+.h2-book-session {
+  color: black;
+}
+
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
