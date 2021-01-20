@@ -40,7 +40,7 @@ export default function Homepage() {
    const history = useHistory();
   const classes = useStyles();
    //button to book session
-   const goBookingSession = (e) => {
+   const goBookingSession = () => {
     history.push(`/code_session`);
   };
 
