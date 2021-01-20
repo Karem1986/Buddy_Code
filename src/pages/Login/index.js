@@ -13,7 +13,7 @@ import {
 import { useHistory } from 'react-router-dom';
 
 export default function Login() {
-  //Material UI styling (not needed now)
+  //Material UI styling (Not needed now)
 const classes = useStyles();
 //Link to signup:
 const history = useHistory();
