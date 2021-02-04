@@ -2,8 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Popover from "@material-ui/core/Popover";
 import Typography from "@material-ui/core/Typography";
+import Box from '@material-ui/core/Box';
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
+
 
 const useStyles = makeStyles((theme) => ({
   typography: {
@@ -12,19 +14,28 @@ const useStyles = makeStyles((theme) => ({
   button: {
     backgroundColor: "black",
     borderRadius: 100,
-    fontSize: 10,
-    minWidth: 50,
-    margin: 5,
+    fontSize: 13,
+    minWidth: 80,
+    margin: 8,
     padding: 5,
     fontWeight: "bold",
-    color: "white",
+    color: "white"
+    
   },
+  boxPopover: {
+    backgroundColor: "black",
+    borderRadius: 60,
+    fontSize: 8,
+    margin: 4,
+    padding: 2,
+  }
+ 
 }));
 
 function CalendarTile({ view }) {
   const classes = useStyles();
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [showButton, setShowButton] = React.useState(false); //false because the button is not shown if not time slot is selected.
+  const [anchorEl, setAnchorEl] = React.useState(null); //POPOVER
+    const [showButton, setShowButton] = React.useState(false); //false because the button is not shown if not time slot is selected.
 
   //logic for pop up--Boolean
   const open = Boolean(anchorEl);
@@ -56,7 +67,7 @@ function CalendarTile({ view }) {
               onClick={handleClick}
               className={classes.button}
             >
-              Choose your buddy now
+              Choose your codeMate
             </Button>
             <Popover
               id={id}
@@ -70,10 +81,16 @@ function CalendarTile({ view }) {
                 vertical: "top",
                 horizontal: "center",
               }}
+            
+          
             >
+              <Box
+             className={classes.boxPopover}
+               >
               <Typography className={classes.typography}>
-                <Link to="/code_session/:select_buddy">Buddies</Link>
+                <Link to="/code_session/:select_buddy">codeMate's list</Link>
               </Typography>
+              </Box>
             </Popover>
           </>
         )}

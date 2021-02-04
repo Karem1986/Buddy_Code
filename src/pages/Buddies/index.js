@@ -10,12 +10,12 @@ export default function Buddies() {
   useEffect(() => {
     async function getProfiles() {
       try {
-        const API_URL = `https://api.github.com`;
+        const API_URL = `https://randomuser.me/api/?results=100`;
 
-        const profiles = await axios.get(`${API_URL}/users`);
+        const profiles = await axios.get(`${API_URL}`);
 
         console.log("testing api", profiles);
-        setGithubUsers(profiles.data);
+        setGithubUsers(profiles.data.results);
       } catch (error) {
         console.log(error.message);
       }
@@ -32,9 +32,9 @@ export default function Buddies() {
           return (
             <DevProfiles
               key={index}
-              login={data.login}
-              html_url={data.html_url}
-              avatar_url={data.avatar_url}
+              name={data.name.first}
+              picture={data.picture.medium}
+              location={data.location.country}
             />
           );
         })}

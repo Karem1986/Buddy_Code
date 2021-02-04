@@ -5,13 +5,9 @@ export default function DevProfiles(props) {
   return (
     <div className="Parent">
       <div className="children">
-        <img src={props.avatar_url} alt="developers profiles" width="300" height="300" />
-        <h4>Alias name: {props.login}</h4>
-
-        <a target="_blank" rel="noopener noreferrer" href={props.html_url}>
-          {" "}
-          <h5> Github profile</h5>{" "}
-        </a>
+        <img src={props.picture} alt="developers profiles" width="300" height="300" />
+        <h4>name: {props.name}</h4>
+        <h3>Location: {props.location}</h3>
       </div>
     </div>
   );

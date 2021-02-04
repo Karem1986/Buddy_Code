@@ -1,5 +1,6 @@
 .h2-book-session {
   color: black;
+  margin: 20px
 }
 
 body {
@@ -20,6 +21,37 @@ body {
   width: 100%;
   display: inline-block;
 }
+.react-calendar__viewContainer {
+  margin: 20px;
+  padding: 10px
+}
+.react-calendar__tile.react-calendar__month-view__days__day {
+  background-color:  #37a9da;
+}
+.react-calendar__month-view__weekdays {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.react-calendar__navigation__label {
+  margin: 2px;
+  padding: 10px;
+  background-color: #37a9da;
+}
+.react-calendar__navigation__arrow.react-calendar__navigation__prev2-button {
+  background-color: #1e9dd4;
+}
+.react-calendar__navigation__arrow.react-calendar__navigation__prev-button {
+  background-color: #1e9dd4;
+}
+
+.react-calendar__navigation__arrow.react-calendar__navigation__next-button {
+  background-color: #1e9dd4;
+}
+.react-calendar__navigation__arrow.react-calendar__navigation__next2-button {
+  background-color: #1e9dd4;
+}
+
+
 
 /* calendar-month-zone header */
 .bt-calendar .calendar-table .calendar-month-zone {
@@ -84,7 +116,6 @@ body {
   display: inline-block;
   width: 14.283%;
   text-align: center;
-  float: left;
   margin: 0;
   padding: 0;
   height: 80px;
@@ -179,15 +210,14 @@ body {
 .bt-calendar.monthly-view .calendar-table .days li .single-event:before {
   content: "\f111";
   color: #1e9dd4;
-  font-size: 8px !important;
-  float: left;
+  font-size: 12px !important;
   padding: 2px 3px 0 0;
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
 }
 
 .bt-calendar.monthly-view .calendar-table .days li .single-event * {
@@ -195,7 +225,7 @@ body {
 }
 
 .bt-calendar.monthly-view .calendar-table .days li .single-event .event-title {
-  color: white;
+  color: "purple";
   max-width: 78%;
   white-space: nowrap;
   text-overflow: ellipsis;
