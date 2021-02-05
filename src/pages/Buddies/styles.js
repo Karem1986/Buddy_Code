@@ -30,10 +30,6 @@ export const useStyles = makeStyles((theme) =>
       textAlign: "center",
       alignItems: "center",
     },
-    button: {
-      size: "large",
-      backgroundColor: green[500],
-      
-    }
+  
   })
 );

@@ -1,7 +1,7 @@
 import React from "react";
 // Mui components
 import { makeStyles, createStyles } from "@material-ui/core/styles";
-import { red } from "@material-ui/core/colors";
+import { green, purple } from "@material-ui/core/colors";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -40,6 +40,15 @@ const useStyles = makeStyles((theme) =>
     expandOpen: {
       transform: "rotate(180deg)",
     },
+    button: {
+      size: "large",
+      backgroundColor: green[500],
+    },
+
+    buttonBlack: {
+      size: "large",
+      backgroundColor: purple[500],
+    }
  
   })
 );
@@ -113,7 +122,7 @@ export default function DevProfiles(props) {
        
       />
       <CardContent>
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h5" gutterBottom>
         Location: {props.location}
       </Typography>
         </CardContent>
@@ -123,13 +132,13 @@ export default function DevProfiles(props) {
           endIcon={<FaceIcon />}
           variant="contained"
           color="primary"
-          className={classes.button}
+          className={classes.buttonBlack}
           onClick={handleClick(SlideTransition)}
         >
           About
         </Button>
   
-          <Button>Message</Button>
+          <Button className={classes.button}>Message</Button>
       
       </CardActions>
     </Paper>
