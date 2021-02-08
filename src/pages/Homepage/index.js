@@ -12,7 +12,7 @@ const premierFounders = [
     imageUrl:
       "https://avatars2.githubusercontent.com/u/50610396?s=460&u=1f7c3ef1e02913b6ada27e305ac0cfd926d48a63&v=4",
       testimonial:
-      "Code mate is fantastic! you can buddy up with someone whenever you want and find work as a developer",
+      "Code mate is fantastic! you can buddy up with someone and learn about web development faster!",
   },
   {
     name: "Olena",
@@ -20,7 +20,7 @@ const premierFounders = [
     imageUrl:
       "https://avatars0.githubusercontent.com/u/7324142?s=460&u=def0ad84ddc36e8c631028faecfe5b6bfdded1cb&v=4",
       testimonial:
-      "Code mate is what I needed to motivate myself pairing up with someone that understands the struggle of coding",
+      "Code mate is what I need to pair up with someone that understands frontend development.",
   },
 
   {
@@ -29,7 +29,7 @@ const premierFounders = [
     imageUrl:
       "https://avatars2.githubusercontent.com/u/54165871?s=460&u=cc54240dff97246e937161b37796991ddeeb3e03&v=4",
       testimonial:
-      "I have met lots of awesome web developers thanks to Code Mate and the best is that is f&$**^8 awesome!",
+      "I have met lots of awesome web developers thanks to Code Mate. It is f&$**^8 awesome!",
   
   },
 ];
@@ -65,7 +65,6 @@ export default function Homepage() {
 <Button
             elevation={23}
             variant="contained"
-            color="primary"
             size="large"
             alignItems="center"
             justify="center"

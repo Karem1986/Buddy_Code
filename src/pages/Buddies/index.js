@@ -9,7 +9,7 @@ export default function Buddies() {
   const classes = useStyles()
   const [githubUsers, setGithubUsers] = useState([]);
 
-  //Display the profiles from random user API until backend is created:
+//Display the profiles from a random user API until backend is created:
 
   useEffect(() => {
     async function getProfiles() {

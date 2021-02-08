@@ -66,7 +66,7 @@ export default function UserReview(props) {
       <Paper>
         <CardHeader
           title={props.name}
-          subheader="Code Mate Reviews"
+          // subheader="Code Mate Reviews"
           
         />
 

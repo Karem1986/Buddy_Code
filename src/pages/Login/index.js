@@ -36,6 +36,10 @@ function submitForm(event) {
   setPassword("");
 
   setSuccess('Your form was submitted successfully')
+  // store fake access token in redux 
+}
+function logout() {
+  // set the accessToken property in redux to null 
 }
 
 function onChange(event, set_Function) {

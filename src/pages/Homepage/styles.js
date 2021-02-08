@@ -7,11 +7,6 @@ export const useStyles = makeStyles((theme) =>
       flexGrow: 1,
       padding: theme.spacing(7),
     },
-    paper: {
-      padding: theme.spacing(1),
-      textAlign: "center",
-      alignItems: "center",
-    },
     button: {
       size: "large",
       backgroundColor: green[500],
