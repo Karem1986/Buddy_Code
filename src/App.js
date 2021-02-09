@@ -9,9 +9,13 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Switch, Route } from "react-router-dom"; //gives a website for each web page
 import "./App.css";
 import BookSession from "./pages/Calendar/index";
+// REDUX
+import { Provider } from "react-redux";
+import store from "./Redux/store";
 
 function App() {
   return (
+    <Provider store={store}>
     <Router>
       <div className="App">
         <NavBar />
@@ -29,6 +33,7 @@ function App() {
         </Switch>
       </div>
     </Router>
+    </Provider>
   );
 }
 
