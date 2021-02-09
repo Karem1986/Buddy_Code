@@ -11,9 +11,15 @@ import {
   } from "@material-ui/core";
   import { useStyles } from "./styles";
 import { useHistory } from 'react-router-dom';
+//Redux 
+import {login} from "../../Redux/actions"
+import {useDispatch } from "react-redux"
 
 export default function Login() {
-  //Material UI styling (Not needed now)
+//Redux
+const dispatch = useDispatch()
+const [isLoggedIn, setLogin] = useState("")
+
 const classes = useStyles();
 //Link to signup:
 const history = useHistory();
@@ -36,10 +42,12 @@ function submitForm(event) {
   setPassword("");
 
   setSuccess('Your form was submitted successfully')
-  // store fake access token in redux 
+  // store fake access token for Redux 
+  setLogin("ImaFakeTOKEN")
 }
-function logout() {
-  // set the accessToken property in redux to null 
+function loginCheck(e, token) {
+  dispatch(login(token))
+  setLogin(isLoggedIn + e.target.value)
 }
 
 function onChange(event, set_Function) {
@@ -106,7 +114,7 @@ color="primary"
 type="submit"
 className="button-block"
 >
-Submit
+LOGIN
 </Button>
 </Grid>
 </Grid>
