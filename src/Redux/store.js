@@ -1,6 +1,6 @@
 // src/store/index.js
 import { createStore, applyMiddleware, compose } from "redux";
-import reducer from "./rootReducer";
+import reducer from "./reducer";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

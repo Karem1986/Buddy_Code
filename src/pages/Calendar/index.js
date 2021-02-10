@@ -3,22 +3,23 @@ import Calendar from "react-calendar";
 import CalendarTile from "../../components/CalendarTile";
 import "./index.css"
 //Redux here
-import {login} from "../../Redux/actions"
-import {useDispatch } from "react-redux"
-
+import { useSelector } from "react-redux"
+import { useHistory } from "react-router-dom";
 
 export default function BookSession() {
-  const dispatch = useDispatch()
-
+ const token = useSelector((state) => state.authToken)
+ const history = useHistory()
   const [currentDate, setCurrentDate] = useState(() => new Date());
   const onChange = (date) => setCurrentDate(date);
 
-  
+  //Check if logged in, if not=> login page
+  if(!token) {
+    history.push('/login')
+  }
   return (
     <div>
       <h2 className="h2-book-session">
         Book your codeMate session </h2>
-{/* Redux logic to display the calendar based on login  */}
       <Calendar
         onChange={onChange}
         tileContent={({ view }) => <CalendarTile view={view} />}
