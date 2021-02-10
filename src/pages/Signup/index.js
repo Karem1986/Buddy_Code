@@ -14,12 +14,11 @@ import {
 } from "@material-ui/core";
 import { useStyles } from "./styles";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 //Redux state to store user signup details
-// import { signUp } from "../../store/user/actions";
-// import { selectToken } from "../../store/user/selectors";
-// import { useDispatch, useSelector } from "react-redux";
+import { login } from "../../Redux/actions";
+import { useDispatch } from "react-redux";
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -34,6 +33,7 @@ function Copyright() {
 }
 
 export default function Signup() {
+  const dispatch = useDispatch()
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -50,6 +50,9 @@ export default function Signup() {
     setEmail("");
     setName("");
     setPassword("");
+
+    //Redux
+    dispatch(login("ImaFakeTOKEN"));
   }
 
   return (

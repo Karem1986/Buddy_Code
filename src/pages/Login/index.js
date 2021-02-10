@@ -8,6 +8,7 @@ import {
   Paper,
   Typography,
   Link,
+  Snackbar, 
 } from "@material-ui/core";
 import { useStyles } from "./styles";
 import { useHistory } from "react-router-dom";
@@ -18,8 +19,6 @@ import { useDispatch } from "react-redux";
 export default function Login() {
   //Redux
   const dispatch = useDispatch();
-
-
   const classes = useStyles();
   //Link to signup:
   const history = useHistory();
@@ -29,7 +28,7 @@ export default function Login() {
   //Form:
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [showmessage, setSuccess] = useState("");
+  const [loggedIn, setLoggedIn] = useState(false);
 
   function submitForm(event) {
     event.preventDefault();
@@ -41,7 +40,7 @@ export default function Login() {
     setEmail("");
     setPassword("");
 
-    setSuccess("Your form was submitted successfully");
+    setLoggedIn(true);
     // store fake access token for Redux
 
     dispatch(login("ImaFakeTOKEN"));
@@ -53,8 +52,16 @@ export default function Login() {
 
   return (
     <div>
-      <p>{showmessage}</p>
-      <div>
+    <div> <Snackbar
+        anchorOrigin={{
+          vertical: 'top',
+          horizontal: 'right',
+        }}
+        open={loggedIn}
+        autoHideDuration={3000}
+        onClose={()=>setLoggedIn(false)}
+        message=' Your form was submitted successfully'
+      /></div>
         <Grid container spacing={0} justify="center" direction="row">
           <Grid item>
             <Grid
@@ -128,6 +135,6 @@ export default function Login() {
           </Grid>
         </Grid>
       </div>
-    </div>
+    
   );
 }
