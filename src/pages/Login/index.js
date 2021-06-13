@@ -31,7 +31,7 @@ export default function Login() {
     setPassword("");
 
     setLoggedIn(true);
-    // store fake access token for Redux:
+    // store fake access token-Redux:
     dispatch(login("ImaFakeTOKEN"));
   }
   useEffect(() => {
