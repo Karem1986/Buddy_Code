@@ -1,4 +1,5 @@
 export const LOGIN = "LOGIN"
+export const SIGNUP = "SIGNUP"
 
 export function login(token) {
 return {
@@ -6,3 +7,9 @@ return {
   payload: token
 }
 }
+export function signup(token) {
+  return {
+    type: "SIGNUP",
+    payload: token
+  }
+  }

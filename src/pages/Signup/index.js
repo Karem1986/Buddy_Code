@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 //Material UI
 import {
   Avatar,
@@ -15,8 +15,9 @@ import {
 import { useStyles } from "./styles";
 import Container from "@material-ui/core/Container";
 //Redux state to store user signup details
-import { login } from "../../Redux/actions";
+import { signup } from "../../Redux/actions";
 import { useDispatch } from "react-redux";
+import { useHistory } from"react-router-dom"
 
 function Copyright() {
   return (
@@ -32,11 +33,13 @@ function Copyright() {
 }
 
 export default function Signup() {
+  const classes = useStyles();
   const dispatch = useDispatch()
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const classes = useStyles();
+  const [signedIn, setSignedIn] = useState(false)
+ const history = useHistory()
 
   function submitForm(event) {
     event.preventDefault();
@@ -50,9 +53,14 @@ export default function Signup() {
     setName("");
     setPassword("");
 
-    //Redux
-    dispatch(login("ImaFakeTOKEN"));
+    setSignedIn(true)
+    dispatch(signup("ImaFakeTOKEN"));
   }
+  useEffect(() => {
+  if(signedIn) {
+    history.push("/code_session")
+  }
+  },[signedIn, history])
 
   return (
     <Container component="main" maxWidth="xs">

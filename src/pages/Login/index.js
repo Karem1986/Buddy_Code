@@ -9,10 +9,9 @@ import { login } from "../../Redux/actions";
 import { useDispatch } from "react-redux";
 
 export default function Login() {
-  //Redux
   const dispatch = useDispatch();
-  //Link to signup:
   const history = useHistory();
+
   const toSignup = () => {
     history.push(`/signup`);
   };

@@ -10,8 +10,13 @@ export default function loginReducer(state = iniitalState, action) {
       console.log("action payload", action.payload)
       return {...state, authToken: action.payload}
     }
+    case "SIGNUP" : {
+      console.log("signup", action.payload)
+      return {...state, authToken: action.payload}
+    }
     default: {
       return state
     }
   }
+  
 }

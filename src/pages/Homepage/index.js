@@ -12,7 +12,7 @@ const premierFounders = [
     imageUrl:
       "https://avatars2.githubusercontent.com/u/50610396?s=460&u=1f7c3ef1e02913b6ada27e305ac0cfd926d48a63&v=4",
       testimonial:
-      "Code mate is fantastic! you can buddy up with someone and learn about web development faster!",
+      "Code mate is fantastic! you can buddy up with someone and learn development faster!",
   },
   {
     name: "Olena",
@@ -20,7 +20,7 @@ const premierFounders = [
     imageUrl:
       "https://avatars0.githubusercontent.com/u/7324142?s=460&u=def0ad84ddc36e8c631028faecfe5b6bfdded1cb&v=4",
       testimonial:
-      "Code mate is what I need to pair up with someone that understands frontend development.",
+      "Code mate is what I need to talk with someone that understands frontend development.",
   },
 
   {
@@ -29,7 +29,7 @@ const premierFounders = [
     imageUrl:
       "https://avatars2.githubusercontent.com/u/54165871?s=460&u=cc54240dff97246e937161b37796991ddeeb3e03&v=4",
       testimonial:
-      "I have met lots of awesome web developers thanks to Code Mate. It is f&$**^8 awesome!",
+      "I have grown my network with other web developers thanks to Code Mate. It is awesome!",
   
   },
 ];
@@ -39,7 +39,7 @@ export default function Homepage() {
    //Dynamic route for button to book session page
    const history = useHistory();
   const classes = useStyles();
-   //button to book session
+
    const goBookingSession = () => {
     history.push(`/code_session`);
   };
