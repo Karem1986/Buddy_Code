@@ -15,7 +15,7 @@ export default function BookSession() {
 
   //useEffect will only run when the state changes: 
  useEffect(() => {
-   //Check if logged in, if not=> login page
+   //Check if logged in to show calendar, if not=> login page
    if(!token) {
     history.push('/login')
   }
@@ -25,6 +25,7 @@ export default function BookSession() {
  if(loading) {
    return "Loading"
  }
+ 
   return (
     <div>
       <h2 className="h2-book-session">
@@ -35,5 +36,5 @@ export default function BookSession() {
         value={currentDate}
       />
     </div>
-  );
+  )
 }

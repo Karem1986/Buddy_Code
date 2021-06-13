@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import DevProfiles from "../../components/DevProfiles";
-import { Box, Grid, Paper, Snackbar, Button, Slide } from "@material-ui/core";
+import { Box, Grid, Paper } from "@material-ui/core";
 import axios from "axios";
 import { useStyles } from "./styles"
 

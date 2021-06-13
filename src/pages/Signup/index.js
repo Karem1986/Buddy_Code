@@ -13,7 +13,6 @@ import {
   Link,
 } from "@material-ui/core";
 import { useStyles } from "./styles";
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Container from "@material-ui/core/Container";
 //Redux state to store user signup details
 import { login } from "../../Redux/actions";

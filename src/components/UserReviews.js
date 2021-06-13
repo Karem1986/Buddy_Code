@@ -47,13 +47,6 @@ export default function UserReview(props) {
     Transition: Fade,
   });
 
-  const handleClick = (Transition) => () => {
-    setState({
-      open: true,
-      Transition,
-    });
-  };
-
   const handleClose = () => {
     setState({
       ...state,
